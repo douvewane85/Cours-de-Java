@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ConnexionController">
+   <children>
+      <Pane layoutX="34.0" layoutY="37.0" prefHeight="335.0" prefWidth="621.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="211.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulaire de Connexion" wrappingWidth="309.6708984375">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <Label layoutX="42.0" layoutY="102.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLogin" layoutX="217.0" layoutY="95.0" prefHeight="34.0" prefWidth="297.0" />
+            <Label layoutX="42.0" layoutY="161.0" text="Mot de Passe">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtPwd" layoutX="217.0" layoutY="159.0" prefHeight="31.0" prefWidth="297.0" />
+            <Button fx:id="btnConnexion" layoutX="394.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleConnexionUser" prefHeight="31.0" prefWidth="120.0" text="Se connecter" />
+            <Text fx:id="lblError" fill="#e10606" layoutX="121.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login ou Mot de Passe Obligatoire" visible="false" wrappingWidth="397.6708984375">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

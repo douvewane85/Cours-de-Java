@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="880.0" prefWidth="1490.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.DashboardController">
+   <children>
+      <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="935.0" prefWidth="1286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="120.0" prefWidth="1286.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="lblNomComplet" layoutX="25.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom et Prenom: " wrappingWidth="525.6708984375">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lblProfil" layoutX="25.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil :" wrappingWidth="553.6708984375">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="633.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfert Argent" wrappingWidth="539.6708984375">
+                     <font>
+                        <Font name="System Bold Italic" size="48.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnDeconnexion" layoutX="1362.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBtnDeconnexion" text="Déconnexion" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="760.0" prefWidth="218.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="22.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="214.6708984375">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Text>
+                  <Pane fx:id="pnlTransaction" layoutX="14.0" layoutY="58.0" prefHeight="240.0" prefWidth="250.0">
+                     <children>
+                        <Text layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" wrappingWidth="214.6708984375">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btnMnuAddCompte" layoutX="39.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleLoadViewAddCompte" prefHeight="31.0" prefWidth="172.0" text="Creation Compte" />
+                        <Button fx:id="btnFaireDepot" layoutX="39.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleLoadViewSetDepot" prefHeight="31.0" prefWidth="172.0" text="Faire Dépot" />
+                        <Button fx:id="btnMnuSetTransaction" layoutX="39.0" layoutY="162.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="172.0" text="Transaction" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlSecurite" layoutX="21.0" layoutY="298.0" prefHeight="240.0" prefWidth="250.0">
+                     <children>
+                        <Text layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Securite" wrappingWidth="214.6708984375">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="39.0" layoutY="56.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="172.0" text="Creation Compte" />
+                        <Button layoutX="39.0" layoutY="105.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="172.0" text="Bloquer Compte" />
+                        <Button layoutX="39.0" layoutY="162.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="172.0" text="Profil" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="anchorContent" prefHeight="760.0" prefWidth="1261.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
